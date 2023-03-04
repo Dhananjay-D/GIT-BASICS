@@ -1,0 +1,90 @@
+C:\Users\User>mkr GIT-BASICS-CLONING
+'mkr' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\User>mkdir GIT-BASICS-CLONING
+
+C:\Users\User>cd GIT-BASICS-CLONING
+
+C:\Users\User\GIT-BASICS-CLONING>git clone https://github.com/Dhananjay-D/GIT-BASICS.git
+Cloning into 'GIT-BASICS'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 9 (delta 3), reused 8 (delta 2), pack-reused 0
+Receiving objects: 100% (9/9), done.
+Resolving deltas: 100% (3/3), done.
+
+C:\Users\User\GIT-BASICS-CLONING>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\User\GIT-BASICS-CLONING>cd Git-basics
+
+C:\Users\User\GIT-BASICS-CLONING\GIT-BASICS>git init GIT-basics
+Initialized empty Git repository in C:/Users/User/GIT-BASICS-CLONING/GIT-BASICS/GIT-basics/.git/
+
+C:\Users\User\GIT-BASICS-CLONING\GIT-BASICS>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        GIT-basics/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\User\GIT-BASICS-CLONING\GIT-BASICS>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        GIT-basics/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\User\GIT-BASICS-CLONING\GIT-BASICS>git branch
+* main
+
+C:\Users\User\GIT-BASICS-CLONING\GIT-BASICS>git add index.html
+
+C:\Users\User\GIT-BASICS-CLONING\GIT-BASICS>git commit -m "changed the message"
+[main 1ea4f69] changed the message
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\User\GIT-BASICS-CLONING\GIT-BASICS>git log
+commit 1ea4f69d98d6e36ca6774d8cb32bd4af078d4e78 (HEAD -> main)
+Author: Dhananjay Dharne <dsdharne2019@gmail.com>
+Date:   Sat Mar 4 19:49:27 2023 +0530
+
+    changed the message
+
+commit 95ed5c1e1e4264add08768cd0cc3862156bf1b0a (origin/main, origin/HEAD)
+Author: Dhananjay Dharne <dsdharne2019@gmail.com>
+Date:   Sat Mar 4 19:33:57 2023 +0530
+
+    added message in it
+
+commit 19e64f5684d65ff4d99f1572e617b20838b13d25
+Author: Dhananjay Dharne <dsdharne2019@gmail.com>
+Date:   Sat Mar 4 19:32:14 2023 +0530
+
+    made a div blue color
+
+C:\Users\User\GIT-BASICS-CLONING\GIT-BASICS>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 96.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Dhananjay-D/GIT-BASICS.git
+   95ed5c1..1ea4f69  main -> main
+
+C:\Users\User\GIT-BASICS-CLONING\GIT-BASICS>cd ..

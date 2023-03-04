@@ -1,0 +1,154 @@
+C:\Users\User>cd GIT-Basics
+
+C:\Users\User\GIT-BASICS>git init
+Initialized empty Git repository in C:/Users/User/GIT-BASICS/.git/
+
+C:\Users\User\GIT-BASICS>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        GIT-BASICS/
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\User\GIT-BASICS>git add "index.html"
+
+C:\Users\User\GIT-BASICS>git commit -m "made a div blue color"
+[master (root-commit) 19e64f5] made a div blue color
+ 1 file changed, 20 insertions(+)
+ create mode 100644 index.html
+
+C:\Users\User\GIT-BASICS>git log
+commit 19e64f5684d65ff4d99f1572e617b20838b13d25 (HEAD -> master)
+Author: Dhananjay Dharne <dsdharne2019@gmail.com>
+Date:   Sat Mar 4 19:32:14 2023 +0530
+
+    made a div blue color
+
+C:\Users\User\GIT-BASICS>git branch
+* master
+
+C:\Users\User\GIT-BASICS>git branch dev
+
+C:\Users\User\GIT-BASICS>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        GIT-BASICS/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\User\GIT-BASICS>git add index.html
+
+C:\Users\User\GIT-BASICS>git commit -m "added message in it"
+[master 95ed5c1] added message in it
+ 1 file changed, 1 insertion(+)
+
+C:\Users\User\GIT-BASICS>git log
+commit 95ed5c1e1e4264add08768cd0cc3862156bf1b0a (HEAD -> master)
+Author: Dhananjay Dharne <dsdharne2019@gmail.com>
+Date:   Sat Mar 4 19:33:57 2023 +0530
+
+    added message in it
+
+commit 19e64f5684d65ff4d99f1572e617b20838b13d25 (dev)
+Author: Dhananjay Dharne <dsdharne2019@gmail.com>
+Date:   Sat Mar 4 19:32:14 2023 +0530
+
+    made a div blue color
+
+C:\Users\User\GIT-BASICS>git branch
+  dev
+* master
+
+C:\Users\User\GIT-BASICS>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\User\GIT-BASICS>git add index.html
+
+C:\Users\User\GIT-BASICS>git commit "typed worl in file"
+error: pathspec 'typed worl in file' did not match any file(s) known to git
+
+C:\Users\User\GIT-BASICS>git commit -m "typed world in file"
+[dev fdb569b] typed world in file
+ 1 file changed, 1 insertion(+)
+
+C:\Users\User\GIT-BASICS>git log
+commit fdb569b28e1d0ab42069b632988fa194610fd5b9 (HEAD -> dev)
+Author: Dhananjay Dharne <dsdharne2019@gmail.com>
+Date:   Sat Mar 4 19:35:41 2023 +0530
+
+    typed world in file
+
+commit 19e64f5684d65ff4d99f1572e617b20838b13d25
+Author: Dhananjay Dharne <dsdharne2019@gmail.com>
+Date:   Sat Mar 4 19:32:14 2023 +0530
+
+    made a div blue color
+
+C:\Users\User\GIT-BASICS>git branch
+* dev
+  master
+
+C:\Users\User\GIT-BASICS>git checkout master
+Switched to branch 'master'
+
+C:\Users\User\GIT-BASICS>git remote -v
+
+C:\Users\User\GIT-BASICS>git remote add origin https://github.com/Dhananjay-D/GIT-BASICS.git
+
+C:\Users\User\GIT-BASICS>git remote -v
+origin  https://github.com/Dhananjay-D/GIT-BASICS.git (fetch)
+origin  https://github.com/Dhananjay-D/GIT-BASICS.git (push)
+
+C:\Users\User\GIT-BASICS>git branch -M main
+
+C:\Users\User\GIT-BASICS>git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 710 bytes | 177.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Dhananjay-D/GIT-BASICS.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\User\GIT-BASICS>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\User\GIT-BASICS>git push
+fatal: The current branch dev has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin dev
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\Users\User\GIT-BASICS>git push -u origin dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 314 bytes | 104.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/Dhananjay-D/GIT-BASICS/pull/new/dev
+remote:
+To https://github.com/Dhananjay-D/GIT-BASICS.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
